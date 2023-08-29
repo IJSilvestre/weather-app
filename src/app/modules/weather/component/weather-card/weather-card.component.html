@@ -1,0 +1,33 @@
+<div class="container" *ngIf="weatherDataCard">
+  <div class="upper-data">
+    <img
+      *ngIf="weatherDataCard.main.temp > 15"
+      src="../../../../../assets/sun.jpg"
+      alt="imagem sol"
+    />
+    <img
+      *ngIf="weatherDataCard.main.temp <= 15"
+      src="../../../../../assets/cold1.jpg"
+      alt="imagem frio"
+    />
+    <div class="weather-data">
+      <div class="location">{{weatherDataCard.name}}</div>
+      <div class="temperature">
+        {{weatherDataCard.main.temp | number:"1.0-0"}}° C
+      </div>
+    </div>
+  </div>
+
+  <div class="lower-data">
+    <div class="more-info-label">Mais informações</div>
+    <div class="more-info-container">
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="minTemperatureIcon"></fa-icon>
+          <span>Minima</span>
+        </div>
+        <div class="info-block-value">   {{weatherDataCard.main.temp_min}}</div>
+      </div>
+    </div>
+  </div>
+</div>

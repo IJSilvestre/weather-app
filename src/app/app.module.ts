@@ -9,13 +9,16 @@ import { WeatherHomeComponent } from './modules/weather/pages/weather-home/weath
 import { WeatherAboutComponent } from './modules/weather/pages/weather-about/weather-about.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { FormsModule } from '@angular/forms';
+import { WeatherCardComponent } from './modules/weather/component/weather-card/weather-card.component';
 
 @NgModule({
-  declarations: [AppComponent, WeatherHomeComponent, WeatherAboutComponent, ErrorPageComponent],
+  declarations: [AppComponent, WeatherHomeComponent, WeatherAboutComponent, ErrorPageComponent, WeatherCardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     HttpClientModule,
     FontAwesomeModule,
   ],
