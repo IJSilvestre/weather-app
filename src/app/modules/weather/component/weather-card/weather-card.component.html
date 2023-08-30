@@ -28,6 +28,27 @@
         </div>
         <div class="info-block-value">   {{weatherDataCard.main.temp_min}}</div>
       </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="minTemperatureIcon"></fa-icon>
+          <span>Maxima</span>
+        </div>
+        <div class="info-block-value">   {{weatherDataCard.main.temp_max}}</div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="homidtyIcon"></fa-icon>
+          <span>Maxima</span>
+        </div>
+        <div class="info-block-value">   {{weatherDataCard.main.humidity}}%</div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="windIcon"></fa-icon>
+          <span>Vento</span>
+        </div>
+        <div class="info-block-value">   {{weatherDataCard.wind.speed}}k/h</div>
+      </div>
     </div>
   </div>
 </div>
